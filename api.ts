@@ -939,41 +939,11 @@ export interface WorkspaceDto {
 }
 
 /**
- * DefaultApi - axios parameter creator
+ * BankTransactionCategoryApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const BankTransactionCategoryApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
-        /**
-         * 
-         * @summary Get Hello
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getHelloHelloGet: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/hello`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
         /**
          * 
          * @summary Predict Bank Transaction Category
@@ -1010,6 +980,181 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 options: localVarRequestOptions,
             };
         },
+    }
+};
+
+/**
+ * BankTransactionCategoryApi - functional programming interface
+ * @export
+ */
+export const BankTransactionCategoryApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = BankTransactionCategoryApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Predict Bank Transaction Category
+         * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PredictBankTransactionCategoryResponseDto>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['BankTransactionCategoryApi.predictBankTransactionCategoryPredictBankTransactionCategoryPost']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * BankTransactionCategoryApi - factory interface
+ * @export
+ */
+export const BankTransactionCategoryApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = BankTransactionCategoryApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Predict Bank Transaction Category
+         * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: any): AxiosPromise<PredictBankTransactionCategoryResponseDto> {
+            return localVarFp.predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * BankTransactionCategoryApi - object-oriented interface
+ * @export
+ * @class BankTransactionCategoryApi
+ * @extends {BaseAPI}
+ */
+export class BankTransactionCategoryApi extends BaseAPI {
+    /**
+     * 
+     * @summary Predict Bank Transaction Category
+     * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof BankTransactionCategoryApi
+     */
+    public predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: RawAxiosRequestConfig) {
+        return BankTransactionCategoryApiFp(this.configuration).predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * HelloApi - axios parameter creator
+ * @export
+ */
+export const HelloApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Get Hello
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getHelloHelloGet: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/hello`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * HelloApi - functional programming interface
+ * @export
+ */
+export const HelloApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = HelloApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Get Hello
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getHelloHelloGet(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelloEntity>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getHelloHelloGet(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['HelloApi.getHelloHelloGet']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * HelloApi - factory interface
+ * @export
+ */
+export const HelloApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = HelloApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Get Hello
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getHelloHelloGet(options?: any): AxiosPromise<HelloEntity> {
+            return localVarFp.getHelloHelloGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * HelloApi - object-oriented interface
+ * @export
+ * @class HelloApi
+ * @extends {BaseAPI}
+ */
+export class HelloApi extends BaseAPI {
+    /**
+     * 
+     * @summary Get Hello
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof HelloApi
+     */
+    public getHelloHelloGet(options?: RawAxiosRequestConfig) {
+        return HelloApiFp(this.configuration).getHelloHelloGet(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * LegalNatureApi - axios parameter creator
+ * @export
+ */
+export const LegalNatureApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
         /**
          * 
          * @summary Predict Legal Nature
@@ -1050,37 +1195,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * LegalNatureApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = DefaultApiAxiosParamCreator(configuration)
+export const LegalNatureApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = LegalNatureApiAxiosParamCreator(configuration)
     return {
-        /**
-         * 
-         * @summary Get Hello
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async getHelloHelloGet(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<HelloEntity>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getHelloHelloGet(options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.getHelloHelloGet']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-        /**
-         * 
-         * @summary Predict Bank Transaction Category
-         * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PredictBankTransactionCategoryResponseDto>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.predictBankTransactionCategoryPredictBankTransactionCategoryPost']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
         /**
          * 
          * @summary Predict Legal Nature
@@ -1091,38 +1211,19 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         async predictLegalNaturePredictLegalNaturePost(predictLegalNatureRequestDto: PredictLegalNatureRequestDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PredictLegalNatureResponseDto>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.predictLegalNaturePredictLegalNaturePost(predictLegalNatureRequestDto, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.predictLegalNaturePredictLegalNaturePost']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['LegalNatureApi.predictLegalNaturePredictLegalNaturePost']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
 
 /**
- * DefaultApi - factory interface
+ * LegalNatureApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = DefaultApiFp(configuration)
+export const LegalNatureApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = LegalNatureApiFp(configuration)
     return {
-        /**
-         * 
-         * @summary Get Hello
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getHelloHelloGet(options?: any): AxiosPromise<HelloEntity> {
-            return localVarFp.getHelloHelloGet(options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @summary Predict Bank Transaction Category
-         * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: any): AxiosPromise<PredictBankTransactionCategoryResponseDto> {
-            return localVarFp.predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options).then((request) => request(axios, basePath));
-        },
         /**
          * 
          * @summary Predict Legal Nature
@@ -1137,45 +1238,22 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
 };
 
 /**
- * DefaultApi - object-oriented interface
+ * LegalNatureApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class LegalNatureApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
-    /**
-     * 
-     * @summary Get Hello
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public getHelloHelloGet(options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).getHelloHelloGet(options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @summary Predict Bank Transaction Category
-     * @param {PredictBankTransactionCategoryRequestDto} predictBankTransactionCategoryRequestDto 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    public predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto: PredictBankTransactionCategoryRequestDto, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).predictBankTransactionCategoryPredictBankTransactionCategoryPost(predictBankTransactionCategoryRequestDto, options).then((request) => request(this.axios, this.basePath));
-    }
-
+export class LegalNatureApi extends BaseAPI {
     /**
      * 
      * @summary Predict Legal Nature
      * @param {PredictLegalNatureRequestDto} predictLegalNatureRequestDto 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof LegalNatureApi
      */
     public predictLegalNaturePredictLegalNaturePost(predictLegalNatureRequestDto: PredictLegalNatureRequestDto, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).predictLegalNaturePredictLegalNaturePost(predictLegalNatureRequestDto, options).then((request) => request(this.axios, this.basePath));
+        return LegalNatureApiFp(this.configuration).predictLegalNaturePredictLegalNaturePost(predictLegalNatureRequestDto, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
