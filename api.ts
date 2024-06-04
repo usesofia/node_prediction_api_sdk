@@ -365,22 +365,10 @@ export interface BankTransactionDto {
     'provider_category_name': string | null;
     /**
      * 
-     * @type {string}
-     * @memberof BankTransactionDto
-     */
-    'payment_data_id': string | null;
-    /**
-     * 
      * @type {BankTransactionPaymentDataDto}
      * @memberof BankTransactionDto
      */
     'payment_data': BankTransactionPaymentDataDto | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof BankTransactionDto
-     */
-    'credit_card_metadata_id': string | null;
     /**
      * 
      * @type {BankTransactionCreditCardMetadataDto}
@@ -400,12 +388,6 @@ export interface BankTransactionDto {
  * @interface BankTransactionPaymentDataDto
  */
 export interface BankTransactionPaymentDataDto {
-    /**
-     * 
-     * @type {string}
-     * @memberof BankTransactionPaymentDataDto
-     */
-    'id': string;
     /**
      * 
      * @type {string}
@@ -820,22 +802,10 @@ export interface PredictLegalNatureBankTransactionDto {
     'provider_category_name': string | null;
     /**
      * 
-     * @type {string}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'payment_data_id': string | null;
-    /**
-     * 
      * @type {BankTransactionPaymentDataDto}
      * @memberof PredictLegalNatureBankTransactionDto
      */
     'payment_data': BankTransactionPaymentDataDto | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'credit_card_metadata_id': string | null;
     /**
      * 
      * @type {BankTransactionCreditCardMetadataDto}
