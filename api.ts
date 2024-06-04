@@ -232,12 +232,6 @@ export interface BankConnectorDto {
 export interface BankTransactionCreditCardMetadataDto {
     /**
      * 
-     * @type {string}
-     * @memberof BankTransactionCreditCardMetadataDto
-     */
-    'transaction_id': string;
-    /**
-     * 
      * @type {number}
      * @memberof BankTransactionCreditCardMetadataDto
      */
