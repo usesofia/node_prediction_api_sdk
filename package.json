@@ -1,6 +1,6 @@
 {
   "name": "node_prediction_api_sdk",
-  "version": "",
+  "version": "1.0.0",
   "description": "OpenAPI client for node_prediction_api_sdk",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
