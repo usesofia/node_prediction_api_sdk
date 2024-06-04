@@ -518,6 +518,31 @@ export interface BankTransactionPaymentDataDto {
 /**
  * 
  * @export
+ * @interface CompanyWorkspaceSettingsDto
+ */
+export interface CompanyWorkspaceSettingsDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CompanyWorkspaceSettingsDto
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CompanyWorkspaceSettingsDto
+     */
+    'business_segment': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CompanyWorkspaceSettingsDto
+     */
+    'other_business_description': string | null;
+}
+/**
+ * 
+ * @export
  * @interface HTTPValidationError
  */
 export interface HTTPValidationError {
@@ -580,6 +605,19 @@ export const LegalNature = {
 export type LegalNature = typeof LegalNature[keyof typeof LegalNature];
 
 
+/**
+ * 
+ * @export
+ * @interface PersonalWorkspaceSettingsDto
+ */
+export interface PersonalWorkspaceSettingsDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof PersonalWorkspaceSettingsDto
+     */
+    'id': string;
+}
 /**
  * 
  * @export
@@ -963,6 +1001,18 @@ export interface WorkspaceDto {
      * @memberof WorkspaceDto
      */
     'hybrid_settings': HybridWorkspaceSettingsDto | null;
+    /**
+     * 
+     * @type {CompanyWorkspaceSettingsDto}
+     * @memberof WorkspaceDto
+     */
+    'company_settings': CompanyWorkspaceSettingsDto | null;
+    /**
+     * 
+     * @type {PersonalWorkspaceSettingsDto}
+     * @memberof WorkspaceDto
+     */
+    'personal_settings': PersonalWorkspaceSettingsDto | null;
 }
 
 /**
