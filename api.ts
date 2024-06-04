@@ -43,10 +43,10 @@ export interface BankAccountDto {
     'bank_connection_id': string;
     /**
      * 
-     * @type {BankConnectorDto}
+     * @type {BankConnectionDto}
      * @memberof BankAccountDto
      */
-    'bank_connection': BankConnectorDto;
+    'bank_connection': BankConnectionDto;
     /**
      * 
      * @type {string}
@@ -95,6 +95,73 @@ export interface BankAccountDto {
      * @memberof BankAccountDto
      */
     'name': string;
+}
+/**
+ * 
+ * @export
+ * @interface BankConnectionDto
+ */
+export interface BankConnectionDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'created_by_user_id': string;
+    /**
+     * 
+     * @type {UserDto}
+     * @memberof BankConnectionDto
+     */
+    'create_by_user': UserDto;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'workspace_id': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof BankConnectionDto
+     */
+    'enabled': boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'history_range': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'provider': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'provider_item_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BankConnectionDto
+     */
+    'connector_id': string;
+    /**
+     * 
+     * @type {BankConnectorDto}
+     * @memberof BankConnectionDto
+     */
+    'connector': BankConnectorDto;
 }
 /**
  * 
@@ -262,58 +329,10 @@ export interface BankTransactionDto {
     'posted_date': string;
     /**
      * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'posted_day': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'posted_week': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'posted_month': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'posted_year': number;
-    /**
-     * 
      * @type {string}
      * @memberof BankTransactionDto
      */
     'competency_date': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'competency_day': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'competency_week': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'competency_month': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof BankTransactionDto
-     */
-    'competency_year': number;
     /**
      * 
      * @type {number}
@@ -727,58 +746,10 @@ export interface PredictLegalNatureBankTransactionDto {
     'posted_date': string;
     /**
      * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'posted_day': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'posted_week': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'posted_month': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'posted_year': number;
-    /**
-     * 
      * @type {string}
      * @memberof PredictLegalNatureBankTransactionDto
      */
     'competency_date': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'competency_day': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'competency_week': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'competency_month': number;
-    /**
-     * 
-     * @type {number}
-     * @memberof PredictLegalNatureBankTransactionDto
-     */
-    'competency_year': number;
     /**
      * 
      * @type {number}
@@ -868,6 +839,62 @@ export interface PredictLegalNatureResponseDto {
 }
 
 
+/**
+ * 
+ * @export
+ * @interface ProfileDto
+ */
+export interface ProfileDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof ProfileDto
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ProfileDto
+     */
+    'full_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ProfileDto
+     */
+    'phone': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ProfileDto
+     */
+    'birth_date': string;
+}
+/**
+ * 
+ * @export
+ * @interface UserDto
+ */
+export interface UserDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserDto
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UserDto
+     */
+    'email': string;
+    /**
+     * 
+     * @type {ProfileDto}
+     * @memberof UserDto
+     */
+    'profile': ProfileDto;
+}
 /**
  * 
  * @export
