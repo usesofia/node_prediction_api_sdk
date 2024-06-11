@@ -235,37 +235,37 @@ export interface BankTransactionCreditCardMetadataDto {
      * @type {number}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'installment_number': number | null;
+    'installment_number'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'total_installments': number | null;
+    'total_installments'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'total_amount': number | null;
+    'total_amount'?: number | null;
     /**
      * 
      * @type {number}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'payee_mcc': number | null;
+    'payee_mcc'?: number | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'card_number': string | null;
+    'card_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionCreditCardMetadataDto
      */
-    'bill_id': string | null;
+    'bill_id'?: string | null;
 }
 /**
  * 
@@ -350,25 +350,25 @@ export interface BankTransactionDto {
      * @type {string}
      * @memberof BankTransactionDto
      */
-    'provider_category_id': string | null;
+    'provider_category_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionDto
      */
-    'provider_category_name': string | null;
+    'provider_category_name'?: string | null;
     /**
      * 
      * @type {BankTransactionPaymentDataDto}
      * @memberof BankTransactionDto
      */
-    'payment_data': BankTransactionPaymentDataDto | null;
+    'payment_data'?: BankTransactionPaymentDataDto | null;
     /**
      * 
      * @type {BankTransactionCreditCardMetadataDto}
      * @memberof BankTransactionDto
      */
-    'credit_card_metadata': BankTransactionCreditCardMetadataDto | null;
+    'credit_card_metadata'?: BankTransactionCreditCardMetadataDto | null;
     /**
      * 
      * @type {string}
@@ -387,109 +387,109 @@ export interface BankTransactionPaymentDataDto {
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_name': string | null;
+    'payer_name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_branch_number': string | null;
+    'payer_branch_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_account_number': string | null;
+    'payer_account_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_routing_number': string | null;
+    'payer_routing_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_routing_number_ispb': string | null;
+    'payer_routing_number_ispb'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_document_number_type': string | null;
+    'payer_document_number_type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payer_document_number_value': string | null;
+    'payer_document_number_value'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'reason': string | null;
+    'reason'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_name': string | null;
+    'receiver_name'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_branch_number': string | null;
+    'receiver_branch_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_account_number': string | null;
+    'receiver_account_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_routing_number': string | null;
+    'receiver_routing_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_routing_number_ispb': string | null;
+    'receiver_routing_number_ispb'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_document_number_type': string | null;
+    'receiver_document_number_type'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_document_number_value': string | null;
+    'receiver_document_number_value'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'payment_method': string | null;
+    'payment_method'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'reference_number': string | null;
+    'reference_number'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof BankTransactionPaymentDataDto
      */
-    'receiver_reference_id': string | null;
+    'receiver_reference_id'?: string | null;
 }
 /**
  * 
@@ -514,7 +514,7 @@ export interface CompanyWorkspaceSettingsDto {
      * @type {string}
      * @memberof CompanyWorkspaceSettingsDto
      */
-    'other_business_description': string | null;
+    'other_business_description'?: string | null;
 }
 /**
  * 
@@ -565,7 +565,7 @@ export interface HybridWorkspaceSettingsDto {
      * @type {string}
      * @memberof HybridWorkspaceSettingsDto
      */
-    'other_business_description': string | null;
+    'other_business_description'?: string | null;
 }
 /**
  * 
@@ -787,25 +787,25 @@ export interface PredictLegalNatureBankTransactionDto {
      * @type {string}
      * @memberof PredictLegalNatureBankTransactionDto
      */
-    'provider_category_id': string | null;
+    'provider_category_id'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof PredictLegalNatureBankTransactionDto
      */
-    'provider_category_name': string | null;
+    'provider_category_name'?: string | null;
     /**
      * 
      * @type {BankTransactionPaymentDataDto}
      * @memberof PredictLegalNatureBankTransactionDto
      */
-    'payment_data': BankTransactionPaymentDataDto | null;
+    'payment_data'?: BankTransactionPaymentDataDto | null;
     /**
      * 
      * @type {BankTransactionCreditCardMetadataDto}
      * @memberof PredictLegalNatureBankTransactionDto
      */
-    'credit_card_metadata': BankTransactionCreditCardMetadataDto | null;
+    'credit_card_metadata'?: BankTransactionCreditCardMetadataDto | null;
 }
 /**
  * 
@@ -964,19 +964,19 @@ export interface WorkspaceDto {
      * @type {HybridWorkspaceSettingsDto}
      * @memberof WorkspaceDto
      */
-    'hybrid_settings': HybridWorkspaceSettingsDto | null;
+    'hybrid_settings'?: HybridWorkspaceSettingsDto | null;
     /**
      * 
      * @type {CompanyWorkspaceSettingsDto}
      * @memberof WorkspaceDto
      */
-    'company_settings': CompanyWorkspaceSettingsDto | null;
+    'company_settings'?: CompanyWorkspaceSettingsDto | null;
     /**
      * 
      * @type {PersonalWorkspaceSettingsDto}
      * @memberof WorkspaceDto
      */
-    'personal_settings': PersonalWorkspaceSettingsDto | null;
+    'personal_settings'?: PersonalWorkspaceSettingsDto | null;
 }
 
 /**
